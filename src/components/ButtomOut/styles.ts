@@ -24,6 +24,7 @@ export const ContainerText = styled.Text`
   font-weight: 400;
   text-align: center;
   line-height: 23px;
+  letter-spacing: 0.3px;
 `;
 
 export const ContainerIcon = styled.View`

@@ -19,4 +19,5 @@ export const ContainerText = styled.Text`
   font-size: 17px;
   color: black;
   font-weight: bold;
+  letter-spacing: 0.3px;
 `;

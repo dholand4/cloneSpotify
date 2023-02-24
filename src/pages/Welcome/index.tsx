@@ -29,7 +29,7 @@ function Welcome() {
         <Buttom />
         <ButtomOut
           Icon="mobile"
-          Text={"Conitnuar com um número de\ntelefone"}
+          Text={"Continuar com um número de\ntelefone"}
         />
         <ButtomOut Icon={"google"} Text={"Continuar com o Google"} />
         <ButtomOut Icon={"facebook"} Text={"Continuar com o Facebook"} />

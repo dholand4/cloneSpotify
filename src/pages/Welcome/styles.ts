@@ -20,6 +20,7 @@ export const Title = styled.Text`
   color: ${theme.colors.white};
   text-align: center;
   line-height: 25px;
+  letter-spacing: 0.3px;
 `;
 
 export const ButtomNav = styled.TouchableOpacity`
@@ -30,6 +31,7 @@ export const TitleButtom = styled.Text`
   font-size: 18px;
   font-weight: 500;
   color: ${theme.colors.white};
+  letter-spacing: 0.3px;
 `;
 
 export const ContainerLogo = styled.View``;
