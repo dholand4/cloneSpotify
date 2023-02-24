@@ -10,7 +10,7 @@ export const Buttom = styled.TouchableOpacity`
   width: 88%;
   height: 50px;
   border-radius: 50px;
-  border: 0.25px;
+  border: 0.4px;
   border-color: ${theme.colors.white};
   align-items: center;
   justify-content: center;

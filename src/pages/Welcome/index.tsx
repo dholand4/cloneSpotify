@@ -1,7 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 
-import background from "../../assets/background.png";
 import logo from "../../assets/logo.png";
 import Buttom from "../../components/Buttom";
 import ButtomOut from "../../components/ButtomOut";

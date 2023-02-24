@@ -1,11 +1,13 @@
 import React from "react";
+import Header from "../../components/Header";
+import Play from "../../components/Play";
 
 import * as Styles from "./styles";
 
 function Home() {
   return (
     <Styles.Container>
-      <Styles.ContainerText>HOME</Styles.ContainerText>
+      <Header />
     </Styles.Container>
   );
 }

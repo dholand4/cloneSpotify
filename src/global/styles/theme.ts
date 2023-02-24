@@ -5,5 +5,6 @@ export default {
     text: "#545151",
     primary: "#0B0B0B",
     secondary: "#1ED760",
+    gray: "#B3B3B3",
   },
 };
