@@ -32,8 +32,8 @@ export default function AppRoutes() {
           height: 70,
           paddingTop: 10,
           paddingBottom: 10,
-          paddingLeft: 10,
-          paddingRight: 10,
+          paddingLeft: 30,
+          paddingRight: 30,
         },
         tabBarActiveTintColor: colors.white,
         tabBarInactiveTintColor: colors.text,
@@ -47,10 +47,10 @@ export default function AppRoutes() {
           tabBarIcon: ({ focused }) => {
             if (focused) {
               return (
-                <Image source={homeIcon} style={{ width: 26, height: 26 }} />
+                <Image source={homeIcon} style={{ width: 25, height: 25 }} />
               );
             } else {
-              return <Octicons name="home" size={26} color={colors.text} />;
+              return <Octicons name="home" size={25} color={colors.text} />;
             }
           },
         }}
@@ -63,10 +63,10 @@ export default function AppRoutes() {
           tabBarIcon: ({ focused }) => {
             if (focused) {
               return (
-                <Image source={searchIcon} style={{ width: 29, height: 29 }} />
+                <Image source={searchIcon} style={{ width: 28, height: 28 }} />
               );
             } else {
-              return <Octicons name="search" size={26} color={colors.text} />;
+              return <Octicons name="search" size={25} color={colors.text} />;
             }
           },
         }}
@@ -80,7 +80,7 @@ export default function AppRoutes() {
             return (
               <Image
                 source={focused ? libIcon : lib_outlineIcon}
-                style={{ width: 26, height: 26 }}
+                style={{ width: 24, height: 24 }}
               />
             );
           },
