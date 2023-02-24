@@ -32,6 +32,8 @@ export default function AppRoutes() {
           height: 70,
           paddingTop: 10,
           paddingBottom: 10,
+          paddingLeft: 10,
+          paddingRight: 10,
         },
         tabBarActiveTintColor: colors.white,
         tabBarInactiveTintColor: colors.text,
