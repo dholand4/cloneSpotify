@@ -1,11 +1,14 @@
 import React from "react";
+import Header from "./components/Header";
+import { SearchMusic } from "./components/SearchMusic";
 
 import * as Styles from "./styles";
 
 function Search() {
   return (
     <Styles.Container>
-      <Styles.ContainerText>Search</Styles.ContainerText>
+      <Header />
+      <SearchMusic />
     </Styles.Container>
   );
 }

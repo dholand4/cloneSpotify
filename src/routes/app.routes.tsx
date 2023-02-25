@@ -16,7 +16,6 @@ import lib_outlineIcon from "../assets/icons/lib-outline.png";
 import libIcon from "../assets/icons/lib.png";
 
 import { ThemeContext } from "styled-components";
-import Header from "../components/Header";
 
 const Tab = createBottomTabNavigator();
 

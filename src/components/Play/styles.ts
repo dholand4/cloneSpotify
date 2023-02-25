@@ -8,7 +8,7 @@ type ProgressProps = {
 export const Container = styled.View`
   align-items: center;
   height: 60px;
-  width: 93%;
+  width: 95%;
   border-radius: 10px;
   flex-direction: row;
   background-color: #084c48;
@@ -62,7 +62,7 @@ export const ContainerIcons = styled.View`
 export const ContainerBar = styled.View`
   position: absolute;
   bottom: 0px;
-  width: 88%;
+  width: 90%;
 `;
 
 export const ContainerProgress = styled.View<ProgressProps>`
