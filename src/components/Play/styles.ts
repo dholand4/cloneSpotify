@@ -1,6 +1,10 @@
 import styled from "styled-components/native";
 import theme from "../../global/styles/theme";
 
+type ProgressProps = {
+  percentage: number;
+};
+
 export const Container = styled.View`
   align-items: center;
   height: 60px;
@@ -21,7 +25,7 @@ export const Content = styled.View`
 export const Album = styled.Image`
   width: 45px;
   height: 45px;
-  margin-left: 8px;
+  margin-left: 10px;
   border-radius: 5px;
 `;
 
@@ -53,4 +57,16 @@ export const TouchImage = styled.TouchableOpacity`
 
 export const ContainerIcons = styled.View`
   flex-direction: row;
+`;
+
+export const ContainerBar = styled.View`
+  position: absolute;
+  bottom: 0px;
+  width: 88%;
+`;
+
+export const ContainerProgress = styled.View<ProgressProps>`
+  width: ${({ percentage }) => percentage}%;
+  height: 2px;
+  background: ${theme.colors.white};
 `;

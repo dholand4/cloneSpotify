@@ -49,6 +49,10 @@ function Play() {
           </Styles.TouchImage>
         </Styles.ContainerIcons>
       </Styles.Container>
+
+      <Styles.ContainerBar>
+        <Styles.ContainerProgress percentage={42} />
+      </Styles.ContainerBar>
     </Styles.Content>
   );
 }
