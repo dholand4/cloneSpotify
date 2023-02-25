@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Image, SafeAreaView } from "react-native";
+import { Image, KeyboardAvoidingView, Platform } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import Play from "../components/Play";
 
@@ -25,81 +26,89 @@ export default function AppRoutes() {
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
-        <Tab.Navigator
-          screenOptions={{
-            headerShown: false,
-            tabBarStyle: {
-              position: "absolute",
-              backgroundColor: "transparent",
-              borderTopWidth: 0,
-              elevation: 0,
-              height: 70,
-              paddingTop: 10,
-              paddingBottom: 10,
-              paddingLeft: 30,
-              paddingRight: 30,
-            },
-            tabBarActiveTintColor: colors.white,
-            tabBarInactiveTintColor: colors.text,
-          }}
+        <KeyboardAvoidingView
+          behavior={Platform.OS === "ios" ? "padding" : "height"}
+          style={{ flex: 1 }}
+          enabled={false}
         >
-          <Tab.Screen
-            name="Home"
-            component={Home}
-            options={{
-              title: "Início",
-              tabBarIcon: ({ focused }) => {
-                if (focused) {
+          <Tab.Navigator
+            screenOptions={{
+              headerShown: false,
+              tabBarStyle: {
+                position: "absolute",
+                backgroundColor: colors.backgroundTab,
+                borderTopWidth: 0,
+                elevation: 0,
+                height: 70,
+                paddingTop: 10,
+                paddingBottom: 10,
+                paddingLeft: 30,
+                paddingRight: 30,
+              },
+              tabBarActiveTintColor: colors.white,
+              tabBarInactiveTintColor: colors.gray,
+            }}
+          >
+            <Tab.Screen
+              name="Home"
+              component={Home}
+              options={{
+                title: "Início",
+                tabBarIcon: ({ focused }) => {
+                  if (focused) {
+                    return (
+                      <Image
+                        source={homeIcon}
+                        style={{ width: 25, height: 25 }}
+                      />
+                    );
+                  } else {
+                    return (
+                      <Octicons name="home" size={25} color={colors.gray} />
+                    );
+                  }
+                },
+              }}
+            />
+            <Tab.Screen
+              name="Settings"
+              component={Search}
+              options={{
+                title: "Buscar",
+                tabBarIcon: ({ focused }) => {
+                  if (focused) {
+                    return (
+                      <Image
+                        source={searchIcon}
+                        style={{ width: 28, height: 28 }}
+                      />
+                    );
+                  } else {
+                    return (
+                      <Octicons name="search" size={25} color={colors.gray} />
+                    );
+                  }
+                },
+              }}
+            />
+            <Tab.Screen
+              name="Library"
+              component={Library}
+              options={{
+                title: "Sua Biblioteca",
+                tabBarIcon: ({ focused }) => {
                   return (
                     <Image
-                      source={homeIcon}
-                      style={{ width: 25, height: 25 }}
+                      source={focused ? libIcon : lib_outlineIcon}
+                      style={{ width: 24, height: 24 }}
                     />
                   );
-                } else {
-                  return <Octicons name="home" size={25} color={colors.text} />;
-                }
-              },
-            }}
-          />
-          <Tab.Screen
-            name="Settings"
-            component={Search}
-            options={{
-              title: "Buscar",
-              tabBarIcon: ({ focused }) => {
-                if (focused) {
-                  return (
-                    <Image
-                      source={searchIcon}
-                      style={{ width: 28, height: 28 }}
-                    />
-                  );
-                } else {
-                  return (
-                    <Octicons name="search" size={25} color={colors.text} />
-                  );
-                }
-              },
-            }}
-          />
-          <Tab.Screen
-            name="Library"
-            component={Library}
-            options={{
-              title: "Sua Biblioteca",
-              tabBarIcon: ({ focused }) => {
-                return (
-                  <Image
-                    source={focused ? libIcon : lib_outlineIcon}
-                    style={{ width: 24, height: 24 }}
-                  />
-                );
-              },
-            }}
-          />
-        </Tab.Navigator>
-        <Play />
+                },
+              }}
+            />
+          </Tab.Navigator>
+          <Play />
+        </KeyboardAvoidingView>
       </SafeAreaView>
     </>
   );

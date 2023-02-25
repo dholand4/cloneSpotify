@@ -4,7 +4,7 @@ import theme from "../../global/styles/theme";
 export const Container = styled.View`
   width: 100%;
   height: 16%;
-  padding: 20px;
+  padding: 10px;
   padding-left: 25px;
   padding-right: 25px;
 `;

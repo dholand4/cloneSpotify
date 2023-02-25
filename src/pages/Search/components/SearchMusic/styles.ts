@@ -4,6 +4,7 @@ import theme from "../../../../global/styles/theme";
 export const ContainerSearchMusic = styled.View`
   align-items: center;
   width: 100%;
+  margin-top: -10px;
 `;
 
 export const Search = styled.TextInput`
@@ -17,7 +18,7 @@ export const Search = styled.TextInput`
 export const ContainerSearch = styled.View`
   height: 52px;
   border-radius: 6px;
-  width: 95%;
+  width: 98%;
   flex-direction: row;
   align-items: center;
   background-color: ${theme.colors.white};

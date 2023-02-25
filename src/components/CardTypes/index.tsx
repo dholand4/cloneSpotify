@@ -1,14 +1,22 @@
 import React from "react";
-import Play from "../../components/Play";
 
 import * as Styles from "./styles";
 
-function Library() {
+interface CardProps {
+  title: string;
+  image: string;
+  color: string;
+}
+
+function CardTypes({ title, image, color }: CardProps) {
   return (
     <Styles.Container>
-      <Styles.ContainerText>LIBRARY</Styles.ContainerText>
+      <Styles.Card color={color}>
+        <Styles.Title>{title}</Styles.Title>
+        <Styles.Image source={image} />
+      </Styles.Card>
     </Styles.Container>
   );
 }
 
-export default Library;
+export default CardTypes;
