@@ -1,25 +1,33 @@
 import React, { useContext } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Image, KeyboardAvoidingView, Platform } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { ThemeContext } from "styled-components";
+import { Octicons } from "@expo/vector-icons";
 
 import Play from "../components/Play";
-
 import Home from "../pages/Home";
-
 import Library from "../pages/Library";
-
-import { Octicons } from "@expo/vector-icons";
+import SearchInput from "../pages/Search/pages/SearchInput";
+import SearchHome from "../pages/Search/pages/SearchHome";
 
 import homeIcon from "../assets/icons/home.png";
 import searchIcon from "../assets/icons/search.png";
 import lib_outlineIcon from "../assets/icons/lib-outline.png";
 import libIcon from "../assets/icons/lib.png";
 
-import { ThemeContext } from "styled-components";
-import SearchHome from "../pages/Search/pages/SearchHome";
-
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
+function SearchRoutes() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Home_Stack" component={SearchHome} />
+      <Stack.Screen name="SearchInput" component={SearchInput} />
+    </Stack.Navigator>
+  );
+}
 
 export default function AppRoutes() {
   const { colors } = useContext(ThemeContext);
@@ -73,7 +81,7 @@ export default function AppRoutes() {
             />
             <Tab.Screen
               name="Settings"
-              component={SearchHome}
+              component={SearchRoutes}
               options={{
                 title: "Buscar",
                 tabBarIcon: ({ focused }) => {

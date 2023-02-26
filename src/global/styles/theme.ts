@@ -7,5 +7,7 @@ export default {
     primary: "#0B0B0B",
     secondary: "#1ED760",
     gray: "#B3B3B3",
+    gray_input: "#535353",
+    gray_place: "#CCCCCC",
   },
 };

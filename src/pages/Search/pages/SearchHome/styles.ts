@@ -20,5 +20,3 @@ export const Title = styled.Text`
 
   margin-top: 40px;
 `;
-
-export const HeaderHeight = styled.View``;

@@ -12,7 +12,6 @@ export function GlobalRoutes() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Welcome" component={Welcome} />
       <Stack.Screen name="Home_Stack" component={AppRoutes} />
-      <Stack.Screen name="SearchInput" component={SearchInput} />
     </Stack.Navigator>
   );
 }
