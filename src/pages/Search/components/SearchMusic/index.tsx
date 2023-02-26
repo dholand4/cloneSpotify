@@ -4,11 +4,15 @@ import { Feather } from "@expo/vector-icons";
 import * as Styles from "./styles";
 import { ThemeContext } from "styled-components";
 
-export function SearchMusic() {
+interface Props {
+  action?: () => void;
+}
+
+export function SearchMusic({ action }: Props) {
   const { colors } = useContext(ThemeContext);
 
   return (
-    <Styles.ContainerSearchMusic>
+    <Styles.ContainerSearchMusic onPress={action}>
       <Styles.ContainerSearch>
         <Feather
           name="search"
@@ -16,7 +20,7 @@ export function SearchMusic() {
           color={colors.background}
           style={{ marginLeft: 13 }}
         />
-        <Styles.Search placeholder="O que você quer ouvir?" />
+        <Styles.Search>O que você quer ouvir?</Styles.Search>
       </Styles.ContainerSearch>
     </Styles.ContainerSearchMusic>
   );

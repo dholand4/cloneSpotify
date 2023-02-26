@@ -6,7 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Play from "../components/Play";
 
 import Home from "../pages/Home";
-import Search from "../pages/Search";
+
 import Library from "../pages/Library";
 
 import { Octicons } from "@expo/vector-icons";
@@ -17,6 +17,7 @@ import lib_outlineIcon from "../assets/icons/lib-outline.png";
 import libIcon from "../assets/icons/lib.png";
 
 import { ThemeContext } from "styled-components";
+import SearchHome from "../pages/Search/pages/SearchHome";
 
 const Tab = createBottomTabNavigator();
 
@@ -39,7 +40,7 @@ export default function AppRoutes() {
                 backgroundColor: colors.backgroundTab,
                 borderTopWidth: 0,
                 elevation: 0,
-                height: 70,
+                height: 65,
                 paddingTop: 10,
                 paddingBottom: 10,
                 paddingLeft: 30,
@@ -72,7 +73,7 @@ export default function AppRoutes() {
             />
             <Tab.Screen
               name="Settings"
-              component={Search}
+              component={SearchHome}
               options={{
                 title: "Buscar",
                 tabBarIcon: ({ focused }) => {

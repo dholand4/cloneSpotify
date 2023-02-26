@@ -5,15 +5,17 @@ type ColorProps = {
   color: string;
 };
 
+export const abc = styled.View``;
+
 export const Container = styled.View`
-  padding: 8px;
+  padding: 6px;
 `;
 
 export const Card = styled.TouchableOpacity<ColorProps>`
   background-color: ${({ color }) => color};
-  height: 120px;
-  width: 180px;
-  border-radius: 8px;
+  height: 115px;
+  width: 182px;
+  border-radius: 5px;
   padding: 13px;
   flex-direction: row;
   overflow: hidden;
@@ -30,8 +32,8 @@ export const Image = styled.Image`
   width: 90px;
   border-radius: 12px;
   position: absolute;
-  right: -12px;
-  bottom: -5px;
+  right: -20px;
+  bottom: -6px;
 
-  transform: rotate(28deg);
+  transform: rotate(36deg);
 `;

@@ -17,7 +17,7 @@ export const Container = styled.View`
 export const Content = styled.View`
   width: 100%;
   position: absolute;
-  bottom: 70px;
+  bottom: 64px;
   justify-content: center;
   align-items: center;
 `;

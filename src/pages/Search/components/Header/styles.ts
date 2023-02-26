@@ -3,16 +3,15 @@ import theme from "../../../../global/styles/theme";
 
 export const Container = styled.View`
   width: 100%;
-  height: 16%;
+  height: 12%;
   padding: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 15px;
 `;
 
 export const Content = styled.View`
   flex-direction: row;
   align-items: center;
-  padding-top: 55px;
+  padding-top: 30px;
   justify-content: space-between;
 `;
 
