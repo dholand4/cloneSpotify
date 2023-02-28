@@ -19,10 +19,12 @@ export const Card = styled.View<RadiusProps>`
   align-items: center;
   justify-content: center;
   background-color: ${theme.colors.gray_second};
+  margin-bottom: 8px;
 `;
 
 export const ContaienrName = styled.View`
   margin-left: 15px;
+  margin-top: -10px;
 `;
 
 export const Name = styled.Text`
