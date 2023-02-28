@@ -3,6 +3,8 @@ import theme from "../../../../global/styles/theme";
 
 export const Container = styled.View`
   flex-direction: row;
+  margin-bottom: 8px;
+  margin-top: 8px;
 `;
 
 export const Button = styled.TouchableOpacity`

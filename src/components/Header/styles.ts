@@ -7,6 +7,7 @@ export const Container = styled.View`
   padding: 10px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: -8px;
 `;
 
 export const Content = styled.View`
