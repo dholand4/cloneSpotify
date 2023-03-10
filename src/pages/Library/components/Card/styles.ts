@@ -13,8 +13,8 @@ export const Container = styled.TouchableOpacity`
 `;
 
 export const Card = styled.View<RadiusProps>`
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
   border-radius: ${({ radius }) => radius}px;
   align-items: center;
   justify-content: center;
@@ -23,12 +23,12 @@ export const Card = styled.View<RadiusProps>`
 `;
 
 export const ContaienrName = styled.View`
-  margin-left: 15px;
+  margin-left: 14px;
   margin-top: -10px;
 `;
 
 export const Name = styled.Text`
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   color: ${theme.colors.white};
   letter-spacing: 0.3px;

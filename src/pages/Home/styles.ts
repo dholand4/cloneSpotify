@@ -15,3 +15,14 @@ export const CategoryTitle = styled.Text`
   letter-spacing: 0.3px;
   padding-left: 15px;
 `;
+
+export const Space = styled.View`
+  height: 130px;
+`;
+
+export const LoadingScreen = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: ${theme.colors.background};
+`;

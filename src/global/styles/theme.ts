@@ -10,5 +10,6 @@ export default {
     gray_input: "#535353",
     gray_place: "#CCCCCC",
     gray_second: "#2a2a2a",
+    gray_button: "#5A5A5A",
   },
 };

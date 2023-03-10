@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
-import { FontAwesome, Fontisto } from "@expo/vector-icons";
+import { Fontisto } from "@expo/vector-icons";
 
 import * as Styles from "./styles";
 

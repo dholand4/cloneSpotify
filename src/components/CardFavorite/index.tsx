@@ -5,10 +5,14 @@ import { FontAwesome, AntDesign } from "@expo/vector-icons";
 
 import * as Styles from "./styles";
 
-function CardFavorite() {
+type Props = {
+  action: () => void;
+};
+
+function CardFavorite({ action }: Props) {
   const { colors } = useContext(ThemeContext);
   return (
-    <Styles.Container>
+    <Styles.Container onPress={action}>
       <Styles.Card>
         <Styles.Image source={mf} />
       </Styles.Card>

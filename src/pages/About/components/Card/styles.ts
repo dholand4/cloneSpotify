@@ -1,11 +1,5 @@
 import styled from "styled-components/native";
-import theme from "../../global/styles/theme";
-
-type RadiusProps = {
-  radius?: string;
-  align?: string;
-  margin?: string;
-};
+import theme from "../../../../global/styles/theme";
 
 export const Container = styled.TouchableOpacity`
   padding: 6px;
@@ -13,11 +7,12 @@ export const Container = styled.TouchableOpacity`
   padding-left: 18px;
   flex-direction: row;
   margin-bottom: 10px;
+  left: 82px;
 `;
 
 export const Card = styled.View`
-  height: 90px;
-  width: 90px;
+  height: 60px;
+  width: 60px;
   flex-direction: row;
   overflow: hidden;
 `;
@@ -45,6 +40,21 @@ export const TypeGer = styled.Text`
   font-size: 13px;
 `;
 
+export const ContainerLyrics = styled.View`
+  border-radius: 3px;
+  background-color: ${theme.colors.gray};
+  margin-right: 5px;
+`;
+
+export const Lyrics = styled.Text`
+  color: ${theme.colors.background};
+  margin-bottom: 1px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+`;
+
 export const ContainerType = styled.View`
   flex-direction: row;
   align-items: center;
@@ -58,4 +68,8 @@ export const Circule = styled.View`
   justify-content: center;
   margin-right: 10px;
   background-color: ${theme.colors.secondary};
+`;
+
+export const PositionIcon = styled.View`
+  left: 80px;
 `;

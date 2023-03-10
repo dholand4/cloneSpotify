@@ -16,6 +16,7 @@ import homeIcon from "../assets/icons/home.png";
 import searchIcon from "../assets/icons/search.png";
 import lib_outlineIcon from "../assets/icons/lib-outline.png";
 import libIcon from "../assets/icons/lib.png";
+import About from "../pages/About";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -25,6 +26,15 @@ function SearchRoutes() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home_Stack" component={SearchHome} />
       <Stack.Screen name="SearchInput" component={SearchInput} />
+    </Stack.Navigator>
+  );
+}
+
+function LibraryRoutes() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Library_Stack" component={Library} />
+      <Stack.Screen name="About" component={About} />
     </Stack.Navigator>
   );
 }
@@ -102,7 +112,7 @@ export default function AppRoutes() {
             />
             <Tab.Screen
               name="Library"
-              component={Library}
+              component={LibraryRoutes}
               options={{
                 title: "Sua Biblioteca",
                 tabBarIcon: ({ focused }) => {

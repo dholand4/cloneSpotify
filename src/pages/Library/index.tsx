@@ -1,20 +1,24 @@
-import { Feather } from "@expo/vector-icons";
-import React, { useContext } from "react";
-import { ThemeContext } from "styled-components";
+import React from "react";
 
 import * as Styles from "./styles";
 import Header from "./components/Header";
 import Order from "./components/Order";
 import CardFavorite from "../../components/CardFavorite";
 import Card from "./components/Card";
+import { useNavigation } from "@react-navigation/native";
 
 function Library() {
-  const { colors } = useContext(ThemeContext);
+  const navigation = useNavigation();
+
+  function handleNavigation() {
+    navigation.navigate("About");
+  }
+
   return (
     <Styles.Container>
       <Header />
       <Order />
-      <CardFavorite />
+      <CardFavorite action={handleNavigation} />
       <Card title="Adicionar artista" radius="100" />
       <Card title="Adicionar podcasts e programas" radius="10" />
     </Styles.Container>

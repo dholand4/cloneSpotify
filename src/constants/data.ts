@@ -15,10 +15,10 @@ import nerdcast from "../assets/artists/nerdcast.png";
 import poddelas from "../assets/artists/poddelas.png";
 
 export interface MusicProps {
-  name: string;
+  name?: string;
   image?: string;
-  radius: string;
-  align: string;
+  radius?: string;
+  align?: string;
   type?: string;
   margin?: string;
 }

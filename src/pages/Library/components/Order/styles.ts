@@ -15,7 +15,7 @@ export const ContainerText = styled.Text`
 `;
 
 export const ConatinerIcons = styled.View`
-  margin-right: -30;
+  margin-right: -30px;
 `;
 
 export const ContainerIconRigt = styled.View`

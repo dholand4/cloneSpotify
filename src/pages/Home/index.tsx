@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FlatList, ScrollView } from "react-native";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
@@ -7,6 +7,7 @@ import Button from "./components/Button";
 import { data, MusicProps } from "../../constants/data";
 
 import * as Styles from "./styles";
+import { Load } from "../../components/Load";
 
 interface CategoryTitleProps {
   title: string;
@@ -17,6 +18,16 @@ const CategoryTitle: React.FC<CategoryTitleProps> = ({ title }) => (
 );
 
 function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 900);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [buttonTop, setButtonTop] = useState(60);
 
@@ -51,30 +62,33 @@ function Home() {
     }
   };
 
-  return (
-    <Styles.Container>
-      {isHeaderVisible && <Header />}
-      <Button style={{ top: buttonTop }} />
-      <ScrollView
-        style={{ marginBottom: 150 }}
-        onScroll={handleScroll}
-        scrollEventThrottle={16}
-      >
-        {data.categories.map((category) => (
-          <React.Fragment key={category.title}>
-            <CategoryTitle title={category.title} />
-            <FlatList
-              data={category.music}
-              renderItem={({ item }) =>
-                renderItem({ item, categoryTitle: category.title })
-              }
-              horizontal
-              showsHorizontalScrollIndicator={false}
-            />
-          </React.Fragment>
-        ))}
-      </ScrollView>
-    </Styles.Container>
+  return isLoading ? (
+    <Styles.LoadingScreen>
+      <Load />
+    </Styles.LoadingScreen>
+  ) : (
+    <>
+      <Styles.Container>
+        {isHeaderVisible && <Header />}
+        <Button style={{ top: buttonTop }} />
+        <ScrollView onScroll={handleScroll} scrollEventThrottle={16}>
+          {data.categories.map((category) => (
+            <React.Fragment key={category.title}>
+              <CategoryTitle title={category.title} />
+              <FlatList
+                data={category.music}
+                renderItem={({ item }) =>
+                  renderItem({ item, categoryTitle: category.title })
+                }
+                horizontal
+                showsHorizontalScrollIndicator={false}
+              />
+            </React.Fragment>
+          ))}
+          <Styles.Space />
+        </ScrollView>
+      </Styles.Container>
+    </>
   );
 }
 
