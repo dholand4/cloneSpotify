@@ -20,7 +20,6 @@ Projeto **Spotify**, projeto clone do aplicativo de streaming Spotify.
 <div align="center">
   <img style="margin: 5px" alt="login" src="https://i.imgur.com/3m1kply.png" width="200">
   <img style="margin: 5px" alt="dashboard" src="https://i.imgur.com/9UPw7DO.png" width="200">
-  <img style="margin: 5px" alt="search" src="https://i.imgur.com/5lonqDx.png" width="200">
   <img style="margin: 5px" alt="library" src="https://i.imgur.com/Up6ZTgV.png" width="200">
   <img style="margin: 5px" alt="about" src="https://i.imgur.com/XsY4wuS.png" width="200">
 </div>
